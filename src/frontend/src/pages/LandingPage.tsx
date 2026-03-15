@@ -185,17 +185,24 @@ export function LandingPage({ onLogin, isLoggingIn }: LandingPageProps) {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-border py-6">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center text-sm text-muted-foreground">
-          © {new Date().getFullYear()}. Built with ❤️ using{" "}
-          <a
-            href={`https://caffeine.ai?utm_source=caffeine-footer&utm_medium=referral&utm_content=${encodeURIComponent(window.location.hostname)}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline hover:text-foreground transition-colors"
-          >
-            caffeine.ai
-          </a>
+      <footer className="border-t border-border">
+        {/* Main footer row */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-5 text-center text-sm text-muted-foreground">
+          © {new Date().getFullYear()} HomeWorker. All rights reserved.
+        </div>
+
+        {/* Admin section */}
+        <div className="border-t border-border/40 py-3">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 flex justify-center">
+            <button
+              type="button"
+              onClick={onLogin}
+              className="text-xs text-muted-foreground/50 hover:text-muted-foreground transition-colors duration-200 tracking-wide"
+              data-ocid="footer.primary_button"
+            >
+              Admin Access
+            </button>
+          </div>
         </div>
       </footer>
     </div>
